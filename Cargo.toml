@@ -1,0 +1,17 @@
+[package]
+name = "spawns_panic_repro_ffi"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "test_ffi"
+crate-type = ["staticlib"] # for .a static lib
+
+
+[dependencies]
+tokio = { version = "1.47.1", features = ["rt-multi-thread", "macros"] }
+spawns = { version = "0.2.4", features = ["tokio"] }
+
+[build-dependencies]
+cbindgen = "0.29.0"
