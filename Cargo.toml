@@ -13,5 +13,8 @@ crate-type = ["staticlib"] # for .a static lib
 tokio = { version = "1.47.1", features = ["rt-multi-thread", "macros"] }
 spawns = { version = "0.2.4", features = ["tokio"] }
 
+[profile.release]
+lto = "fat"
+
 [build-dependencies]
 cbindgen = "0.29.0"
