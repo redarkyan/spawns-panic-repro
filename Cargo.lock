@@ -449,7 +449,16 @@ dependencies = [
 ]
 
 [[package]]
-name = "spawns_panic_repro_ffi"
+name = "spawns_panic_repro_ffi_v1"
+version = "0.1.0"
+dependencies = [
+ "cbindgen",
+ "spawns",
+ "tokio",
+]
+
+[[package]]
+name = "spawns_panic_repro_ffi_v2"
 version = "0.1.0"
 dependencies = [
  "cbindgen",

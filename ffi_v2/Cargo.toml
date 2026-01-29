@@ -1,0 +1,15 @@
+[package]
+name = "spawns_panic_repro_ffi_v2"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "ffi_v2"
+crate-type = ["staticlib"]
+
+[dependencies]
+tokio = { version = "1.47.1", features = ["rt-multi-thread", "macros"] }
+spawns = { version = "0.2.4", features = ["tokio"] }
+
+[build-dependencies]
+cbindgen = "0.29.0"
